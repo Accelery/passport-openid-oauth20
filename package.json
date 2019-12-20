@@ -1,5 +1,5 @@
 {
-  "name": "passport-openid-oauth2",
+  "name": "passport-openid-oauth20",
   "version": "0.1.3",
   "description": "OAuth 2.0 authentication strategy for OpenID profiles for Passport.",
   "keywords": [
