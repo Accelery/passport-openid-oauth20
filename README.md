@@ -23,14 +23,15 @@ complete authentication.
 var OpenIdOAuth2Strategy = require('passport-openid-oauth2').Strategy;
 
 // Example using Google OpenID profile.
-passport.use('google',
+passport.use(
+  'google',
   new OpenIdOAuth2Strategy(
     {
       authorizationURL: 'https://accounts.google.com/o/oauth2/v2/auth',
       tokenURL: 'https://www.googleapis.com/oauth2/v4/token',
       userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo',
       clientID: GOOGLE_CLIENT_ID,
-      clientSecret: GOOGLE_CLIENT_SECRET',
+      clientSecret: GOOGLE_CLIENT_SECRET,
       callbackURL: 'https://www.example.net/auth/google/callback'
     },
     function(accessToken, refreshToken, profile, cb) {
