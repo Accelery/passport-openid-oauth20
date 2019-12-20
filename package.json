@@ -1,6 +1,6 @@
 {
   "name": "passport-openid-oauth2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "OAuth 2.0 authentication strategy for OpenID profiles for Passport.",
   "keywords": [
     "passport",
@@ -19,10 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:kertof/passport-openid-oauth2.git"
+    "url": "https://github.com/kertof/passport-openid-oauth2.git"
   },
   "bugs": {
-    "url": "https://gitlab.com/kertof/passport-openid-oauth2/issues"
+    "url": "https://github.com/kertof/passport-openid-oauth2/issues"
   },
   "license": "MIT",
   "licenses": [
