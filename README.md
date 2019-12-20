@@ -73,4 +73,4 @@ app.get(
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2012-2016 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>
+Copyright (c) 2019 Christophe Querton <[https://kertof.com/](https://kertof.com/)>
