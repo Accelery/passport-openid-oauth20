@@ -1,13 +1,13 @@
-# passport-openid-oauth2
+# passport-openid-oauth20
 
 [Passport](http://passportjs.org/) strategy for authenticating with OpenID providers using the OAuth 2.0 API.
 
-[![npm](https://img.shields.io/npm/v/passport-openid-oauth2.svg)](https://www.npmjs.com/package/passport-openid-oauth2)
+[![npm](https://img.shields.io/npm/v/passport-openid-oauth20.svg)](https://www.npmjs.com/package/passport-openid-oauth20)
 
 ## Install
 
 ```bash
-npm install passport-openid-oauth2
+npm install passport-openid-oauth20
 ```
 
 ## Usage
@@ -20,17 +20,18 @@ OpenID profile. The `verify` callback must call `cb` providing a user to
 complete authentication.
 
 ```javascript
-var OpenIdOAuth2Strategy = require('passport-openid-oauth2').Strategy;
+var OpenIdOAuth2Strategy = require('passport-openid-oauth20').Strategy;
 
 // Example using Google OpenID profile.
-passport.use('google',
+passport.use(
+  'google',
   new OpenIdOAuth2Strategy(
     {
       authorizationURL: 'https://accounts.google.com/o/oauth2/v2/auth',
       tokenURL: 'https://www.googleapis.com/oauth2/v4/token',
       userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo',
       clientID: GOOGLE_CLIENT_ID,
-      clientSecret: GOOGLE_CLIENT_SECRET',
+      clientSecret: GOOGLE_CLIENT_SECRET,
       callbackURL: 'https://www.example.net/auth/google/callback'
     },
     function(accessToken, refreshToken, profile, cb) {
@@ -47,7 +48,7 @@ passport.use('google',
 
 ### Authenticate Requests
 
-Use `passport.authenticate()`, specifying the strategy name, or `'openid-oauth2'`, to
+Use `passport.authenticate()`, specifying the strategy name, or `'openid-oauth20'`, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
