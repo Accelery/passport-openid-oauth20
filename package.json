@@ -12,6 +12,9 @@
     "authentication",
     "identity"
   ],
+  "scripts": {
+    "test": "mocha"
+  },
   "author": {
     "name": "Christophe Querton",
     "email": "christophe@accelery.be",
@@ -36,6 +39,9 @@
     "passport-oauth2": "1.x.x"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-passport-strategy": "^1.0.1",
+    "mocha": "^6.2.2",
     "prettier": "^1.19.1"
   }
 }
