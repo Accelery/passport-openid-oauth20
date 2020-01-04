@@ -2,6 +2,8 @@
 
 [Passport](http://passportjs.org/) strategy for authenticating with OpenID providers using the OAuth 2.0 API.
 
+[![Build Status](https://travis-ci.org/kertof/passport-openid-oauth20.svg?branch=master)](https://travis-ci.org/kertof/passport-openid-oauth20)
+
 [![npm](https://img.shields.io/npm/v/passport-openid-oauth20.svg)](https://www.npmjs.com/package/passport-openid-oauth20)
 
 ## Install
