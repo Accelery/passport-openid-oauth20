@@ -13,7 +13,9 @@
     "identity"
   ],
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "nyc npm run test"
+
   },
   "author": {
     "name": "Christophe Querton",
@@ -42,6 +44,7 @@
     "chai": "^4.2.0",
     "chai-passport-strategy": "^1.0.1",
     "mocha": "^6.2.2",
+    "nyc": "^15.0.0",
     "prettier": "^1.19.1"
   }
 }
