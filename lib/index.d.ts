@@ -1,1 +1,1 @@
-declare var Strategy: any;
+export = exports;
