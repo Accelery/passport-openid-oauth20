@@ -40,7 +40,7 @@ import * as OAuth2Strategy from "passport-oauth2";
 export declare class Strategy extends OAuth2Strategy {
     name: string;
     private userProfileURL;
-    constructor(options: any, verify: any);
+    constructor(options: any, verify: OAuth2Strategy.VerifyFunction);
     /**
      * Retrieve user profile.
      *
@@ -56,8 +56,5 @@ export declare class Strategy extends OAuth2Strategy {
      * Return extra parameters to be included in the authorization request.
      *
      */
-    authorizationParams(options: any): {};
+    authorizationParams(options: any): any;
 }
-export declare const strategy: {
-    Strategy: typeof Strategy;
-};

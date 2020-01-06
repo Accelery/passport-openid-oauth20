@@ -15,7 +15,7 @@
  * @return {object}
  * @access public
  */
-let parse = function(json) {
+let parse = function(json: any) {
   if ("string" == typeof json) {
     json = JSON.parse(json);
   }

@@ -42,7 +42,7 @@ import { parse } from "./profile/openid";
 export class Strategy extends OAuth2Strategy {
   name: string;
   private userProfileURL: string;
-  constructor(options, verify) {
+  constructor(options: any, verify: OAuth2Strategy.VerifyFunction) {
     super(options, verify);
     [
       "authorizationURL",
@@ -73,11 +73,7 @@ export class Strategy extends OAuth2Strategy {
    *   - `displayName`
    */
   userProfile(accessToken: string, done: Function) {
-    this._oauth2.get(this.userProfileURL, accessToken, function(
-      err,
-      body,
-      res
-    ) {
+    this._oauth2.get(this.userProfileURL, accessToken, (err, body, res) => {
       var json;
       if (err) {
         return done(new Error("failed to fetch user profile"));
@@ -104,7 +100,7 @@ export class Strategy extends OAuth2Strategy {
    *
    */
   authorizationParams(options: any) {
-    var params = {};
+    var params: any = {};
 
     if (options.accessType) {
       params["access_type"] = options.accessType;
@@ -122,5 +118,3 @@ export class Strategy extends OAuth2Strategy {
     return params;
   }
 }
-
-export const strategy = { Strategy };
