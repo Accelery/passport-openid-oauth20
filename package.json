@@ -40,9 +40,6 @@
       "url": "http://opensource.org/licenses/MIT"
     }
   ],
-  "files": [
-    "./lib/**/*"
-  ],
   "main": "./lib",
   "dependencies": {
     "passport-oauth2": "^1.5.0"
