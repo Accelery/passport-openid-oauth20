@@ -19,6 +19,7 @@
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
     "coverage": "nyc npm run test",
     "prepare": "npm run build",
+    "prepublish": "tsc",
     "prepublishOnly": "npm test"
   },
   "author": {
@@ -40,10 +41,11 @@
       "url": "http://opensource.org/licenses/MIT"
     }
   ],
+  "types": "index.d.ts",
   "files": [
-    "lib/**/*.js"
+    "lib/**/*"
   ],
-  "main": "lib/",
+  "main": "lib/index.js",
   "dependencies": {
     "passport-oauth2": "^1.5.0"
   },
