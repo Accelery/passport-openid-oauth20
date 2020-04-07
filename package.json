@@ -23,16 +23,16 @@
     "prepublishOnly": "npm test"
   },
   "author": {
-    "name": "Christophe Querton",
-    "email": "christophe@accelery.be",
-    "url": "https://kertof.com/"
+    "name": "Accelery",
+    "email": "team@accelery.be",
+    "url": "https://accelery.be/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kertof/passport-openid-oauth20"
+    "url": "https://github.com/accelery/passport-openid-oauth20"
   },
   "bugs": {
-    "url": "https://github.com/kertof/passport-openid-oauth20/issues"
+    "url": "https://github.com/accelery/passport-openid-oauth20/issues"
   },
   "license": "MIT",
   "licenses": [
