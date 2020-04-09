@@ -19,7 +19,7 @@
   "scripts": {
     "prebuild": "rimraf lib/",
     "build": "tsc",
-    "precommit": "npm run format && npm test",
+    "precommit": "npm run format && git add && npm test",
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
     "coverage": "nyc npm run test",
