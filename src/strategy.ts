@@ -1,6 +1,6 @@
 // Load modules.
-import * as OAuth2Strategy from "passport-oauth2";
-import { parse } from "./profile/openid";
+import * as OAuth2Strategy from 'passport-oauth2';
+import { parse } from './profile/openid';
 /**
  * `Strategy` constructor.
  *
@@ -45,20 +45,20 @@ export class Strategy extends OAuth2Strategy {
   constructor(options: any, verify: OAuth2Strategy.VerifyFunction) {
     super(options, verify);
     [
-      "authorizationURL",
-      "tokenURL",
-      "userProfileURL",
-      "clientID",
-      "clientSecret",
-      "callbackURL"
-    ].forEach(function(k) {
+      'authorizationURL',
+      'tokenURL',
+      'userProfileURL',
+      'clientID',
+      'clientSecret',
+      'callbackURL',
+    ].forEach(function (k) {
       if (!options[k]) {
         throw new Error(
-          `You must provide ${k} to use passport-openid-oauth20.`
+          `You must provide ${k} to use passport-openid-oauth20.`,
         );
       }
     });
-    this.name = "openid-oauth20";
+    this.name = 'openid-oauth20';
     this.userProfileURL = options.userProfileURL;
   }
 
@@ -76,13 +76,13 @@ export class Strategy extends OAuth2Strategy {
     this._oauth2.get(this.userProfileURL, accessToken, (err, body, res) => {
       var json;
       if (err) {
-        return done(new Error("failed to fetch user profile"));
+        return done(new Error('failed to fetch user profile'));
       }
 
       try {
         json = JSON.parse(body as string);
       } catch (e) {
-        return done(new Error("Failed to parse user profile"));
+        return done(new Error('Failed to parse user profile'));
       }
 
       let profile = parse(json);
@@ -103,16 +103,16 @@ export class Strategy extends OAuth2Strategy {
     var params: any = {};
 
     if (options.accessType) {
-      params["access_type"] = options.accessType;
+      params['access_type'] = options.accessType;
     }
     if (options.prompt) {
-      params["prompt"] = options.prompt;
+      params['prompt'] = options.prompt;
     }
     if (options.loginHint) {
-      params["login_hint"] = options.loginHint;
+      params['login_hint'] = options.loginHint;
     }
     if (options.includeGrantedScopes) {
-      params["include_granted_scopes"] = true;
+      params['include_granted_scopes'] = true;
     }
 
     return params;

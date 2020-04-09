@@ -15,8 +15,8 @@
  * @return {object}
  * @access public
  */
-let parse = function(json: any) {
-  if ("string" == typeof json) {
+let parse = function (json: any) {
+  if ('string' == typeof json) {
     json = JSON.parse(json);
   }
 
@@ -27,22 +27,22 @@ let parse = function(json: any) {
   if (json.family_name || json.given_name) {
     profile.name = {
       familyName: json.family_name,
-      givenName: json.given_name
+      givenName: json.given_name,
     };
   }
   if (json.email) {
     profile.emails = [
       {
         value: json.email,
-        verified: json.email_verified
-      }
+        verified: json.email_verified,
+      },
     ];
   }
   if (json.picture) {
     profile.photos = [
       {
-        value: json.picture
-      }
+        value: json.picture,
+      },
     ];
   }
 

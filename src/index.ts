@@ -1,5 +1,5 @@
 // Load modules.
-import { Strategy } from "./strategy";
+import { Strategy } from './strategy';
 
 // Expose Strategy.
 exports = module.exports = Strategy;
