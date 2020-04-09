@@ -12,40 +12,26 @@
     "authentication",
     "identity"
   ],
-  "scripts": {
-    "prebuild": "rimraf lib/",
-    "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "test": "mocha -r ts-node/register src/**/*.spec.ts",
-    "coverage": "nyc npm run test",
-    "prepare": "npm run build",
-    "prepublish": "tsc",
-    "prepublishOnly": "npm test"
-  },
-  "author": {
-    "name": "Accelery",
-    "email": "team@accelery.be",
-    "url": "https://accelery.be/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/accelery/passport-openid-oauth20"
-  },
-  "bugs": {
-    "url": "https://github.com/accelery/passport-openid-oauth20/issues"
-  },
-  "license": "MIT",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/MIT"
-    }
-  ],
-  "types": "index.d.ts",
   "files": [
     "lib/**/*"
   ],
   "main": "lib/index.js",
+  "scripts": {
+    "prebuild": "rimraf lib/",
+    "build": "tsc",
+    "precommit": "npm run format",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts",
+    "coverage": "nyc npm run test",
+    "prepublish ": "npm run build",
+    "prepublishOnly": "npm test"
+  },
+  "repository":  "github:accelery/passport-openid-oauth20",
+  "bugs": {
+    "url": "https://github.com/accelery/passport-openid-oauth20/issues"
+  },
+  "license": "MIT",
+  "types": "index.d.ts",
   "dependencies": {
     "passport-oauth2": "^1.5.0"
   },
@@ -55,6 +41,7 @@
     "@types/node": "^13.11.0",
     "@types/passport-oauth2": "^1.4.9",
     "chai": "^4.2.0",
+    "husky": "^4.2.3",
     "mocha": "^7.1.1",
     "nyc": "^15.0.1",
     "prettier": "^2.0.4",
