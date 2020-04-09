@@ -19,14 +19,14 @@
   "scripts": {
     "prebuild": "rimraf lib/",
     "build": "tsc",
-    "precommit": "npm run format",
+    "precommit": "npm run format && npm test",
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
     "coverage": "nyc npm run test",
     "prepublish ": "npm run build",
     "prepublishOnly": "npm test"
   },
-  "repository":  "github:accelery/passport-openid-oauth20",
+  "repository": "github:accelery/passport-openid-oauth20",
   "bugs": {
     "url": "https://github.com/accelery/passport-openid-oauth20/issues"
   },
@@ -34,6 +34,12 @@
   "types": "index.d.ts",
   "dependencies": {
     "passport-oauth2": "^1.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit",
+      "pre-push": "npm run precommit"
+    }
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
