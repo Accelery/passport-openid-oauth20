@@ -8,9 +8,7 @@
     "oauth2",
     "openid",
     "auth",
-    "authn",
-    "authentication",
-    "identity"
+    "authentication"
   ],
   "files": [
     "lib/**/*"
@@ -19,10 +17,8 @@
   "scripts": {
     "prebuild": "rimraf lib/",
     "build": "tsc",
-    "precommit": "npm run format && npm test",
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
-    "coverage": "nyc npm run test",
     "prepublish ": "npm run build",
     "prepublishOnly": "npm test"
   },
@@ -31,15 +27,8 @@
     "url": "https://github.com/accelery/passport-openid-oauth20/issues"
   },
   "license": "MIT",
-  "types": "index.d.ts",
   "dependencies": {
     "passport-oauth2": "^1.5.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run precommit",
-      "pre-push": "npm run precommit"
-    }
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
@@ -47,7 +36,6 @@
     "@types/node": "^13.11.0",
     "@types/passport-oauth2": "^1.4.9",
     "chai": "^4.2.0",
-    "husky": "^4.2.3",
     "mocha": "^7.1.1",
     "nyc": "^15.0.1",
     "prettier": "^2.0.4",
