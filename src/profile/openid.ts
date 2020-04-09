@@ -16,7 +16,7 @@
  * @access public
  */
 let parse = function (json: any) {
-  if ('string' == typeof json) {
+  if ("string" == typeof json) {
     json = JSON.parse(json);
   }
 
