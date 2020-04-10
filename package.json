@@ -18,6 +18,7 @@
     "prebuild": "rimraf lib/",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
+    "pretest": "npm run build",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
     "prepublish ": "npm run build",
     "prepare ": "npm run build",
