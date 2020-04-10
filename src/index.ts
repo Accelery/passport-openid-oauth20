@@ -1,5 +1,5 @@
 // Load modules.
-import { Strategy } from "./strategy";
+import * as Strategy from "./strategy";
 
 // Expose Strategy.
 exports = module.exports = Strategy;
@@ -7,4 +7,4 @@ exports = module.exports = Strategy;
 // Exports.
 exports.Strategy = Strategy;
 
-export = Strategy;
+export = exports;
