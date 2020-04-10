@@ -1,5 +1,5 @@
 // Load modules.
-import * as OAuth2Strategy from "passport-oauth2";
+import { Strategy as OAuth2Strategy, VerifyFunction } from "passport-oauth2";
 import { parse } from "./profile/openid";
 /**
  * `Strategy` constructor.
@@ -42,7 +42,7 @@ import { parse } from "./profile/openid";
 export class Strategy extends OAuth2Strategy {
   name: string;
   private userProfileURL: string;
-  constructor(options: any, verify: OAuth2Strategy.VerifyFunction) {
+  constructor(options: any, verify: VerifyFunction) {
     super(options, verify);
     [
       "authorizationURL",
@@ -118,3 +118,4 @@ export class Strategy extends OAuth2Strategy {
     return params;
   }
 }
+export default Strategy;
