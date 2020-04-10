@@ -20,6 +20,7 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
     "prepublish ": "npm run build",
+    "prepare ": "npm run build",
     "prepublishOnly": "npm test"
   },
   "repository": "github:accelery/passport-openid-oauth20",
