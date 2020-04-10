@@ -7,4 +7,4 @@ exports = module.exports = Strategy;
 // Exports.
 exports.Strategy = Strategy;
 
-export = { exports, Strategy };
+export = Strategy;
