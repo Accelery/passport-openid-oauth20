@@ -73,6 +73,7 @@ export class Strategy extends OAuth2Strategy {
    *   - `displayName`
    */
   userProfile(accessToken: string, done: Function) {
+    this._oauth2.useAuthorizationHeaderforGET(true);
     this._oauth2.get(this.userProfileURL, accessToken, (err, body, res) => {
       var json;
       if (err) {
